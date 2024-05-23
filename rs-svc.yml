@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rs-svc1
+  labels: 
+    env: prod
+spec:
+  selector:
+    app: myapp
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 30006
+  type: LoadBalancer      

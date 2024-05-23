@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replica-set-pod
+  labels:
+    env: prod
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      name: myapp
+      labels:
+        app: myapp
+    spec: 
+      containers:
+        - name: myapp-cont-replicaset
+          image: lerndevops/samplepyapp:v2
+
+    

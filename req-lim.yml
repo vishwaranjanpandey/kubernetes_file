@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: req-lim-pod
+  labels:
+    env: prod
+spec:
+  containers:
+    - name: req-lim-pod
+      image: nginx
+      resources:
+        requests:
+          cpu: "100m"
+          memory: "20Mi"
+        limits: 
+          cpu: "200m"
+          memory: "100Mi"
