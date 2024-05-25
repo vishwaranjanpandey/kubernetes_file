@@ -23,4 +23,4 @@ spec:
     spec: 
       containers:
         - name: myapp-cont-replicaset
-          image: lerndevops/samplepyapp:v2
+          image: lerndevops/samplepyapp:v1
